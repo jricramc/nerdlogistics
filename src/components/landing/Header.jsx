@@ -42,6 +42,7 @@ export default function Header() {
 
           <Button
             onClick={() => setModalOpen(true)}
+            data-action="book-demo"
             className="!bg-black hover:!bg-gray-900 !text-white px-5 py-2 text-sm rounded-md shadow-sm transition-colors shrink-0"
           >
             Book a call

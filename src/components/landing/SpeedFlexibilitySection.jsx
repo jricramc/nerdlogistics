@@ -24,6 +24,7 @@ export default function SpeedFlexibilitySection() {
               </p>
               <Button
                 onClick={() => setModalOpen(true)}
+                data-action="book-demo"
                 className="bg-gray-900 hover:bg-gray-800 text-white px-8 py-3 text-base rounded-md shadow-sm transition-colors"
               >
                 Book a call

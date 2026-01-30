@@ -46,6 +46,7 @@ export default function HeroSection() {
           >
             <button
               onClick={() => setModalOpen(true)}
+              data-action="book-demo"
               className="min-h-[44px] min-w-[44px] inline-flex items-center justify-center px-8 py-3.5 rounded-md font-medium text-base bg-white text-gray-900 shadow-md hover:bg-white hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black/30 transition-all duration-200 touch-manipulation cursor-pointer"
             >
               Get started

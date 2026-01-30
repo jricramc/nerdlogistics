@@ -47,6 +47,7 @@ export default function BeyondSavingsSection() {
             </p>
             <motion.button
               onClick={() => setModalOpen(true)}
+              data-action="book-demo"
               className="px-6 py-3 bg-gray-900 text-white rounded-md hover:bg-gray-800 shadow-sm transition-colors"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}

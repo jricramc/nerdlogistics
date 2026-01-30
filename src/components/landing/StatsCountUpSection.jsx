@@ -96,6 +96,7 @@ export default function StatsCountUpSection() {
               </h2>
               <Button
                 onClick={() => setModalOpen(true)}
+                data-action="book-demo"
                 className="!bg-black hover:!bg-gray-900 !text-white px-8 py-3 text-base rounded-md shadow-sm transition-colors"
               >
                 Book a call
