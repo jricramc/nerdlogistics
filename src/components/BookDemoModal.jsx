@@ -8,8 +8,10 @@ import {
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export default function BookDemoModal({ open, onOpenChange }) {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: '',
     company: '',
@@ -18,7 +20,6 @@ export default function BookDemoModal({ open, onOpenChange }) {
     message: '',
   });
   const [loading, setLoading] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -67,19 +68,18 @@ export default function BookDemoModal({ open, onOpenChange }) {
       });
 
       if (response.ok) {
-        setSubmitted(true);
-        setTimeout(() => {
-          setSubmitted(false);
-          onOpenChange(false);
-          // Reset form
-          setFormData({
-            name: '',
-            company: '',
-            email: '',
-            phone: '',
-            message: '',
-          });
-        }, 2000);
+        // Reset form
+        setFormData({
+          name: '',
+          company: '',
+          email: '',
+          phone: '',
+          message: '',
+        });
+        // Close modal
+        onOpenChange(false);
+        // Navigate to success page
+        navigate('/sentform');
       } else {
         alert('Error sending request. Please try again.');
       }
@@ -100,14 +100,7 @@ export default function BookDemoModal({ open, onOpenChange }) {
           </DialogTitle>
         </DialogHeader>
 
-        {submitted ? (
-          <div className="text-center py-8">
-            <p className="text-lg text-gray-700">
-              ✅ Thank you! We'll be in touch soon.
-            </p>
-          </div>
-        ) : (
-          <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-4">
             {/* Name and Company */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="space-y-2">
@@ -223,7 +216,6 @@ export default function BookDemoModal({ open, onOpenChange }) {
               </Button>
             </div>
           </form>
-        )}
       </DialogContent>
     </Dialog>
   );
