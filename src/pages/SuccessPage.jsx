@@ -5,6 +5,16 @@ export default function SuccessPage() {
   const navigate = useNavigate();
 
   useEffect(() => {
+    // Fire Google Ads conversion event
+    if (window.gtag) {
+      window.gtag('event', 'conversion', {
+        'send_to': 'AW-17867742764/TyWxCNeE0u8bEKy8gMhC',
+        'value': 1.0,
+        'currency': 'EUR'
+      });
+    }
+
+    // Redirect after 3.5 seconds
     const timer = setTimeout(() => {
       navigate('/');
     }, 3500);
