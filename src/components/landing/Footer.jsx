@@ -22,7 +22,7 @@ export default function Footer() {
   return (
     <footer className="bg-gray-50 border-t border-gray-100 pt-24 pb-12">
       <div className="container mx-auto px-6 pt-20 pb-14 md:pt-24 md:pb-16">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 md:gap-10">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
             <a
@@ -34,6 +34,30 @@ export default function Footer() {
             <p className="mt-3 text-sm text-gray-500 max-w-[200px]">
               AI-native operations for logistics teams.
             </p>
+          </div>
+
+          {/* Contact Information */}
+          <div className="col-span-2 md:col-span-1">
+            <h3 className="text-xs font-normal text-gray-500 uppercase tracking-wider mb-4">
+              Contact
+            </h3>
+            <div className="space-y-3">
+              <div>
+                <p className="text-sm text-gray-600">
+                  123 Innovation Drive<br />
+                  Suite 100<br />
+                  Boston, MA 02139
+                </p>
+              </div>
+              <div>
+                <a
+                  href="tel:+16175551234"
+                  className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
+                >
+                  +1 (617) 555-1234
+                </a>
+              </div>
+            </div>
           </div>
 
           {/* Links */}
