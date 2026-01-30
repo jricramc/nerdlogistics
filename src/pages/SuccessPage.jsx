@@ -7,7 +7,7 @@ export default function SuccessPage() {
   useEffect(() => {
     const timer = setTimeout(() => {
       navigate('/');
-    }, 1000);
+    }, 3500);
 
     return () => clearTimeout(timer);
   }, [navigate]);
