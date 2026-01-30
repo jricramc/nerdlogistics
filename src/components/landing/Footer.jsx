@@ -44,17 +44,16 @@ export default function Footer() {
             <div className="space-y-3">
               <div>
                 <p className="text-sm text-gray-600">
-                  123 Innovation Drive<br />
-                  Suite 100<br />
-                  Boston, MA 02139
+                  121 Nassau Street<br />
+                  New York, NY 10038
                 </p>
               </div>
               <div>
                 <a
-                  href="tel:+16175551234"
+                  href="tel:+12147806726"
                   className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
                 >
-                  +1 (617) 555-1234
+                  +1 214 780 6726
                 </a>
               </div>
             </div>
