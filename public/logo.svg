@@ -1,0 +1,14 @@
+<svg width="48" height="48" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- White background -->
+  <rect width="32" height="32" fill="white"/>
+  <!-- Left temple -->
+  <path d="M2 14 L8 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  <!-- Left lens -->
+  <circle cx="12" cy="14" r="4" stroke="currentColor" stroke-width="2" fill="none"/>
+  <!-- Bridge -->
+  <path d="M16 14 L20 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  <!-- Right lens -->
+  <circle cx="24" cy="14" r="4" stroke="currentColor" stroke-width="2" fill="none"/>
+  <!-- Right temple -->
+  <path d="M28 14 L30 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+</svg>
